@@ -1,0 +1,43 @@
+
+			
+			SELECT ucs_group.id as `id`,ucs_group.name as `name` FROM ucs_group   WHERE name='admins'    
+			
+			SELECT ucs_group.id as `id`,ucs_group.name as `name` FROM ucs_group   WHERE parent=1    
+			
+			SELECT ucs_group.id as `id`,ucs_group.name as `name` FROM ucs_group   WHERE parent=2    
+			
+			SELECT ucs_group.id as `id`,ucs_group.name as `name` FROM ucs_group   WHERE parent=3    
+			
+			SELECT ucs_group.id as `id`,ucs_group.name as `name` FROM ucs_group   WHERE parent=5    
+			
+			SELECT ucs_user.id as `id`,ucs_user.login as `login`,ucs_user.password as `password` FROM ucs_user   WHERE login='vasya' AND password=md5('vasya')    
+			
+			SELECT ucs_groupmember.user as `user`,ucs_groupmember.group as `group` FROM ucs_groupmember  left join				ucs_user as `ucs_user` on				ucs_groupmember.user=ucs_user.id  left join				ucs_group as `ucs_group` on				ucs_groupmember.group=ucs_group.id   WHERE user='2' AND `group` IN (1,2,3,5)    
+			
+			SELECT ucs_groupmember.id as `id`,ucs_groupmember.user as `user`,ucs_user.login as `_user_login`,ucs_groupmember.group as `group`,ucs_group.name as `_group_name`,ucs_groupmember.owner as `owner` FROM ucs_groupmember  left join				ucs_user as `ucs_user` on				ucs_groupmember.user=ucs_user.id  left join				ucs_group as `ucs_group` on				ucs_groupmember.group=ucs_group.id   WHERE 1     LIMIT 0,5
+			
+			SELECT COUNT(*) FROM ucs_groupmember  left join				ucs_user as `ucs_user` on				ucs_groupmember.user=ucs_user.id  left join				ucs_group as `ucs_group` on				ucs_groupmember.group=ucs_group.id   WHERE 1    
+			
+			SELECT * FROM ucs_user   WHERE 1    
+			
+			SELECT * FROM ucs_group   WHERE 1    
+			
+			SELECT ucs_group.id as `id`,ucs_group.name as `name` FROM ucs_group   WHERE name='admins'    
+			
+			SELECT ucs_group.id as `id`,ucs_group.name as `name` FROM ucs_group   WHERE parent=1    
+			
+			SELECT ucs_group.id as `id`,ucs_group.name as `name` FROM ucs_group   WHERE parent=2    
+			
+			SELECT ucs_group.id as `id`,ucs_group.name as `name` FROM ucs_group   WHERE parent=3    
+			
+			SELECT ucs_group.id as `id`,ucs_group.name as `name` FROM ucs_group   WHERE parent=5    
+			
+			SELECT ucs_user.id as `id`,ucs_user.login as `login`,ucs_user.password as `password` FROM ucs_user   WHERE login='zryy' AND password=md5('')    
+			
+			SELECT ucs_groupmember.id as `id`,ucs_groupmember.user as `user`,ucs_user.login as `_user_login`,ucs_groupmember.group as `group`,ucs_group.name as `_group_name`,ucs_groupmember.owner as `owner` FROM ucs_groupmember  left join				ucs_user as `ucs_user` on				ucs_groupmember.user=ucs_user.id  left join				ucs_group as `ucs_group` on				ucs_groupmember.group=ucs_group.id   WHERE 1     LIMIT 0,5
+			
+			SELECT COUNT(*) FROM ucs_groupmember  left join				ucs_user as `ucs_user` on				ucs_groupmember.user=ucs_user.id  left join				ucs_group as `ucs_group` on				ucs_groupmember.group=ucs_group.id   WHERE 1    
+			
+			SELECT * FROM ucs_user   WHERE 1    
+			
+			SELECT * FROM ucs_group   WHERE 1    

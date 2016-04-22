@@ -1,0 +1,5 @@
+SELECT ucs_groupmember.user as `user`,ucs_groupmember.group as `group` FROM ucs_groupmember  left join
+				ucs_user as `ucs_user` on
+				ucs_groupmember.user=ucs_user.id  left join
+				ucs_group as `ucs_group` on
+				ucs_groupmember.group=ucs_group.id   WHERE user={uid} AND `group` IN (1,2,3,5)    

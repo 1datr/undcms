@@ -1,0 +1,1 @@
+<div class="alert alert-<?php echo $mestype; ?>"><?php echo $_mes; ?></div>
