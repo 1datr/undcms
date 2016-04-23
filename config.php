@@ -12,7 +12,7 @@ $_PROFILES=Array(
 				'user'=>'root',
 				'password'=>'',//'123456',
 				'dbname'=>'ideaman',
-				'prefix'=>'ucs_',
+				'prefix'=>'im_',
 				'charset'=>'utf8',
 				'subcharset'=>'utf8_general_ci'
 			),

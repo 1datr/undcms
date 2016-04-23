@@ -101,6 +101,8 @@ class DBScheme extends QMan
 							unset($obj_params['#defdata']);
 							$this->_SCHEME[$objname] = new DBSTable($objname,$obj_params,$defdata);
 						}
+						else 
+							$this->_SCHEME[$objname] = new DBSTable($objname,$obj_params);
 					}
 					else 
 						$this->_SCHEME[$objname] = new DBSTable($objname,$obj_params);

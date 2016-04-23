@@ -336,7 +336,7 @@ class DBD_Mysql extends DBDriver
 	function DeleteTable($table)
 	{ 
 	
-		$this->exe_query("DROP TABLE `".$this->_PREFIX.$table."` CASCADE");
+		$this->exe_query("DROP TABLE IF EXISTS `".$this->_PREFIX.$table."` CASCADE");
 	}
 	
 	// Select queries
