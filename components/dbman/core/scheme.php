@@ -85,19 +85,22 @@ class DBScheme extends QMan
 					}
 					if(xarray_key_exists('#defdata', $obj_params))
 					{
-						$_keys = array_keys($obj_params['#defdata']);
-					//	var_dump($_keys);
-						if(!is_array($obj_params['#defdata'][ $_keys[0] ]))
+						if(count($obj_params['#defdata'])>0)
 						{
-							$defdata = Array($obj_params['#defdata']);
+							$_keys = array_keys($obj_params['#defdata']);
+					//		var_dump($_keys);
+							if(!is_array($obj_params['#defdata'][ $_keys[0] ]))
+							{
+								$defdata = Array($obj_params['#defdata']);
 							//var_dump($defdata);
+							}
+							else
+							{
+								$defdata = $obj_params['#defdata'];
+							}
+							unset($obj_params['#defdata']);
+							$this->_SCHEME[$objname] = new DBSTable($objname,$obj_params,$defdata);
 						}
-						else
-						{
-							$defdata = $obj_params['#defdata'];
-						}
-						unset($obj_params['#defdata']);
-						$this->_SCHEME[$objname] = new DBSTable($objname,$obj_params,$defdata);
 					}
 					else 
 						$this->_SCHEME[$objname] = new DBSTable($objname,$obj_params);

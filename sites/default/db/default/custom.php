@@ -2,13 +2,13 @@
 $_DB->scheme->x_add('department',Array(
 		'name'=>'text',
 		//'fld1'=>'varchar',
-		'parent'=>'#departments.id',
+		'parent'=>'#department.id',
 		//'adate'=>'datetime',// date
 		'leader'=>'#user.id|{login}',
-	/*	'#defdata'=>Array(
+		'#defdata'=>Array(
 			//	Array('name'=>'1234','leader'=>3),
 			//	Array('name'=>'5678','charact'=>'SSS FFF TTT','user'=>3),
-		)*/
+		)
 ));
 
 $_DB->scheme->x_add('idea',Array(
